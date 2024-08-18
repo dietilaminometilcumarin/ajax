@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AJAX</title>
+    <style>
+        body {
+            width: auto;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(237, 237, 131);
+	    overflow:hidden;
+        }
+
+        div {
+            width: 50%;
+            height: auto;
+            background-color: rgba(20, 220, 43, 0.267);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 3px solid rgb(106, 23, 23);
+        }
+	div p{font-size: 20px;font-weight:bold;}
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>AJAX NETWORK SERVICE:</p><p>
+	<p><a id="lnk" href="#">OPEN GROUP - <span id="spn">...</span></a></p>
+	<p><a href="https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link" target="blank">DOWNLOAD APP</a></p>
+    </div>
+</body>
+
+<script>
+	const p = window.location.search.replace('?','');
+	document.getElementById('spn').innerText = p;
+	document.getElementById('lnk').href = "ajax://" + p;
+</script>
+
+</html>
