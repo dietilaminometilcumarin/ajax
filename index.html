@@ -1,43 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <title>AJAX</title>
-    <style>
-        body {
-            width: auto;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(237, 237, 131);
-	    overflow:hidden;
-        }
+   <title>AJAX OPEN NETWORK</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Ajax Open Network" />
+   <meta name="ajax.callback@gmail.com" content="DETACH" />
 
-        div {
-            width: 50%;
-            height: auto;
-            background-color: rgba(20, 220, 43, 0.267);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            border: 3px solid rgb(106, 23, 23);
-        }
-	div p{font-size: 20px;font-weight:bold;}
-    </style>
+   <meta property="og:title" content="Ajax Open Network" />
+   <meta property="og:type"  content="Social Network" />
+   <meta property="og:description" content="Communicate, share your ideas, have fun!"/>
+   <meta property="og:image" content="logo.jpg" />
+   <meta property="og:url"   content="https://ajax.detach.pp.ua/" />
+
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:creator" content="@AjaxOpenNetwork" />
+
+   <link rel="shortcut icon" href="/favicon.ico" />
+   <link rel="stylesheet" type="text/css" href="single.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+   <style>
+      body {
+         background: url(background39.png);
+      }
+
+      .floating-button {
+         text-decoration: none;
+         outline: none;
+         display: inline-block;
+         width: 240px;
+         height: 45px;
+         line-height: 45px;
+         border-radius: 45px;
+         margin: 10px 20px;
+         font-family: 'Montserrat', sans-serif;
+         font-size: 11px;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-weight: 600;
+         color: #524f4e;
+         background: white;
+         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+         transition: .3s;
+      }
+
+      .floating-button:hover {
+         background: #2EE59D;
+         box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+         color: #fff;
+         transform: translateY(-7px);
+      }
+   </style>
 </head>
 
 <body>
-    <div>
-        <p>AJAX NETWORK SERVICE:</p><p>
-	<p><a id="lnk" href="#">OPEN GROUP - <span id="spn">...</span></a></p>
-	<p><a href="https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link" target="blank">DOWNLOAD APP</a></p>
-    </div>
+   <div class="top"><a>Web Console</a></div>
+   <div class="container">
+      <header>
+         <h1>Ajax Open Network</h1>
+         <p>Communicate, share your ideas, have fun!</p>
+         <nav>
+            <a href="https://www.facebook.com/muzicextro"   target="blank" class="fa fa-facebook"></a>
+            <a href="https://x.com/AjaxOpenNetwork"         target="blank" class="fa fa-twitter"></a>
+            <a href="https://instagram.com/muzophon"        target="blank" class="current-demo- fa fa-instagram"></a>
+	    <a href="https://www.patreon.com/ajax_network"  target="blank" ><img src="patreon.png" width="14px" height="14px"/></a>
+         </nav>
+      </header>
+
+      <div class="button-container">
+         <p id="spn" style="font-size:2.0em;color:red;"></p>
+      </div>
+
+      <div class="button-container">
+         <a href="https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link" target="blank" class="floating-button">Download App</a>
+	 <a href="#" id="lnk" class="floating-button" style="display:none;">Open Channel</a>
+      </div>
+   </div>
 </body>
 
 <script>
 	const p = window.location.search.replace('?','');
 	document.getElementById('spn').innerText = p;
-	document.getElementById('lnk').href = "ajax://" + p;
+	const e = document.getElementById('lnk');
+	e.href = "ajax://" + p;
+	if(p)e.style.display='inline-block';
 </script>
 
 </html>
