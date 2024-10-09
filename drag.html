@@ -37,7 +37,7 @@ actualImage.onload = function() {
     const zoomY = this.height / containerSize.height - 1;
     
     container.addEventListener('touchstart', function(event) {
-      alert(event.clientX);
+      alert(event.touches[0].clientX);
       cursorPosBefore = { x: event.clientX, y: event.clientY };
       imagePosBefore = imagePosAfter; // Get current image position
     });
