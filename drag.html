@@ -37,8 +37,8 @@ actualImage.onload = function() {
     const zoomY = this.height / containerSize.height - 1;
     
     container.addEventListener('touchstart', function(event) {
-      alert(event.touches[0].clientX);
-      cursorPosBefore = { x: event.clientX, y: event.clientY };
+      //alert(event.touches[0].clientX);
+      cursorPosBefore = { x: event.touches[0].clientX, y: event.touches[0].clientY };
       imagePosBefore = imagePosAfter; // Get current image position
     });
 
@@ -47,9 +47,9 @@ actualImage.onload = function() {
 
         if (event.buttons === 0) return;
 
-        let newXPos = imagePosBefore.x + ((cursorPosBefore.x - event.clientX) / containerSize.width * 100 / zoomX);
+        let newXPos = imagePosBefore.x + ((cursorPosBefore.x - event.touches[0].clientX) / containerSize.width * 100 / zoomX);
         newXPos = (newXPos < 0) ? 0 : (newXPos > 100) ? 100 : newXPos;
-        let newYPos = imagePosBefore.y + ((cursorPosBefore.y - event.clientY) / containerSize.height * 100 / zoomY);
+        let newYPos = imagePosBefore.y + ((cursorPosBefore.y - event.touches[0].clientY) / containerSize.height * 100 / zoomY);
         newYPos = (newYPos < 0) ? 0 : (newYPos > 100) ? 100 : newYPos;
 
         imagePosAfter = { x: newXPos, y: newYPos };
