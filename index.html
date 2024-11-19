@@ -73,7 +73,7 @@
       </div>
 
       <div class="button-container">
-         <a href="https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link" target="blank" class="floating-button">Download App</a>
+         <a id="dwn" href="#" target="blank" class="floating-button">Download App</a>
 	 <a href="#" id="lnk" class="floating-button" style="display:none;">Open Channel</a>
       </div>
    </div>
@@ -82,8 +82,17 @@
 <script>
 	const p = window.location.search.replace('?','');
 	document.getElementById('spn').innerText = p;
+	const d = document.getElementById('dwn');
 	const e = document.getElementById('lnk');
-	e.href = "ajax://" + p;
+
+	
+	if(window.navigator.userAgent.indexOf("Windows")>0){
+	    d.href = "https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link";
+	    e.href = "ajax://" + p;
+	}else{
+	    d.href = "https://drive.google.com/file/d/18SSYHUYz7AMDFUucK-aRg0UVFD1TJjOf/view?usp=drive_link";
+	    e.href = "ajax://param?" + p;
+	}
 	if(p)e.style.display='inline-block';
 </script>
 
