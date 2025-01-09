@@ -81,7 +81,7 @@
 
 <script>
 	const p = window.location.search.replace('?','');
-	document.getElementById('spn').innerText = p;
+	document.getElementById('spn').innerText = p.split("fbclid")[0];
 	const d = document.getElementById('dwn');
 	const e = document.getElementById('lnk');
 
