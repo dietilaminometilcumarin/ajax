@@ -101,12 +101,8 @@
 	}
 	if(p){
 		e.style.display='inline-block';
-        		QRCode.toDataURL(p, function (error, url) {
-           		 	//if (error) 
-				console.error(error);
-            			//else {
-                			document.getElementById('qrcode').src = url;
-            			//}
+        		QRCode.toDataURL("ajax://param?" + p, function (error, url) {
+                		document.getElementById('qrcode').src = url;
         		});
 	}
 </script>
