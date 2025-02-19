@@ -90,7 +90,7 @@
 </body>
 
 <script>
-	const p = window.location.search.replace('?','').get('folder').split("fbclid")[0].replaceAll("&","");
+	const p = window.location.search.get('folder').replace('?','').split("fbclid")[0].replaceAll("&","");
 	document.getElementById('spn').innerText = p;
 	const d = document.getElementById('dwn');
 	const e = document.getElementById('lnk');
