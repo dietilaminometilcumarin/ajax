@@ -91,15 +91,15 @@
 
 <script>
 	//const p = window.location.search.replace('?','').split("fbclid")[0].replaceAll("&","");
-	const urlParams = new URLSearchParams(window.location.search);
-        const p = urlParams.get('folder');
-	alert(p);
-	if(!p){
-	    const path = window.location.pathname.split('/').filter(Boolean);
-            const folder = path[path.length - 1];
-            window.location.href = '/index.htm?folder=' + folder;
-	}
-	document.getElementById('spn').innerText = p;
+	//const urlParams = new URLSearchParams(window.location.search);
+        //const p = urlParams.get('folder');
+	//alert(p);
+	//if(!p){
+	//    const path = window.location.pathname.split('/').filter(Boolean);
+        //    const folder = path[path.length - 1];
+        //    window.location.href = '/index.htm?folder=' + folder;
+	//}
+	//document.getElementById('spn').innerText = p;
 	const d = document.getElementById('dwn');
 	const e = document.getElementById('lnk');
 
@@ -113,12 +113,12 @@
 	    d.href = "https://www.amazon.com/gp/product/B0DV976FZS";
 	    e.href = "ajax://param?" + p;
 	}
-	if(p){
-		e.style.display='inline-block';
-        		QRCode.toDataURL("ajax://param?" + p, function (error, url) {
-                		document.getElementById('qrcode').src = url;
-        		});
-	}
+	//if(p){
+	//	e.style.display='inline-block';
+        //		QRCode.toDataURL("ajax://param?" + p, function (error, url) {
+        //        		document.getElementById('qrcode').src = url;
+        //		});
+	//}
 </script>
 
 </html>
