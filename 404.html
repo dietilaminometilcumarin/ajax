@@ -1,1 +1,122 @@
-hello
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>AJAX Messenger</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Ajax messenger and blogger. New era of messaging" />
+   <meta name="keywords" content="ajax messenger, open ajax, open network, NFT, last news, bloggers, private messenger, открытый мессенджер, блогерам, мессенджер без цензуры, искусственный интеллект, обмен фото и видео, личные сообщения, последние новости, защищенный обмен данными,open messenger, bloggers, uncensored messenger, artificial intelligence, photo and video sharing, private messages, latest news, secure data exchange" />
+   <meta name="ajax.callback@gmail.com" content="AJAX" />
+
+   <meta name="robots" content="all" />	
+
+   <meta property="og:title" content="Ajax Messenger" />
+   <meta property="og:site_name" content="Ajax">
+   <meta property="og:type"  content="Messenger" />
+   <meta property="og:description" content="Ajax - messenger with support for artificial intelligence and neural networks."/>
+   <meta property="og:image" content="logo.jpg" />
+   <meta property="og:url"   content="https://youlink.uk" />
+
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:creator" content="@AjaxOpenNetwork" />
+
+   <link rel="canonical"   href="https://youlink.uk/" />	
+   <link rel="shortcut icon" href="/favicon.ico" />
+   <link rel="stylesheet" type="text/css" href="single.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+
+   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+   <style>
+      body {
+         background: url(background39.png);
+      }
+
+      .floating-button {
+         text-decoration: none;
+         outline: none;
+         display: inline-block;
+         width: 240px;
+         height: 45px;
+         line-height: 45px;
+         border-radius: 45px;
+         margin: 10px 20px;
+         font-family: 'Montserrat', sans-serif;
+         font-size: 11px;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         font-weight: 600;
+         color: #524f4e;
+         background: white;
+         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+         transition: .3s;
+      }
+
+      .floating-button:hover {
+         background: #2EE59D;
+         box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+         color: #fff;
+         transform: translateY(-7px);
+      }
+   </style>
+</head>
+
+<body>
+   <div class="top"><a>Web Console</a></div>
+   <div class="container">
+      <header>
+         <h1>Ajax Open Network</h1>
+         <p>Communicate, share your ideas, have fun!</p>
+         <nav>
+            <a href="https://www.facebook.com/allmarshal/"  target="blank" class="fa fa-facebook"></a>
+            <a href="https://x.com/AjaxOpenNetwork"         target="blank" class="fa fa-twitter"></a>
+            <a href="https://instagram.com/alex_marshal_official"        target="blank" class="current-demo- fa fa-instagram"></a>
+	    <a href="https://www.patreon.com/ajax_network"  target="blank" ><img src="patreon.png" width="14px" height="14px"/></a>
+         </nav>
+      </header>
+
+
+
+      <div class="button-container">
+	<img id="qrcode"><br>
+         <p id="spn" style="font-size:2.0em;color:red;"></p>
+      </div>
+
+      <div class="button-container">
+         <a id="dwn" href="#" target="blank" class="floating-button">Download App</a>
+	 <a href="#" id="lnk" class="floating-button" style="display:none;">Open Channel</a>
+      </div>
+   </div>
+</body>
+
+<script>
+	//const p = window.location.search.replace('?','').split("fbclid")[0].replaceAll("&","");
+  const path = window.location.pathname.split('/').filter(Boolean);
+  const p   = path[path.length - 1];
+  
+  //window.location.href = '/index.htm?folder=' + folder;
+	document.getElementById('spn').innerText = p;
+	const d = document.getElementById('dwn');
+	const e = document.getElementById('lnk');
+
+	
+	if(window.navigator.userAgent.indexOf("Windows")>0){
+	    d.href = "https://drive.google.com/file/d/19Tj_e40xztcAK-AzQRu1Ui2NV52hOPMl/view?usp=drive_link";
+	    e.href = "ajax://" + p;
+	}else{
+	    //d.href = "https://drive.google.com/file/d/18SSYHUYz7AMDFUucK-aRg0UVFD1TJjOf/view?usp=drive_link";
+	    //apkpure.net/p/com.Detach.Ajax	
+	    d.href = "https://www.amazon.com/gp/product/B0DV976FZS";
+	    e.href = "ajax://param?" + p;
+	}
+	if(p){
+		e.style.display='inline-block';
+        		QRCode.toDataURL("ajax://param?" + p, function (error, url) {
+                		document.getElementById('qrcode').src = url;
+        		});
+	}
+</script>
+
+</html>
+
