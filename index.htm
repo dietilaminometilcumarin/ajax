@@ -94,6 +94,11 @@
 	const urlParams = new URLSearchParams(window.location.search);
         const p = urlParams.get('folder');
 	alert(p);
+	if(!p){
+	    const path = window.location.pathname.split('/').filter(Boolean);
+            const folder = path[path.length - 1];
+            window.location.href = '/index.htm?folder=' + folder;
+	}
 	document.getElementById('spn').innerText = p;
 	const d = document.getElementById('dwn');
 	const e = document.getElementById('lnk');
