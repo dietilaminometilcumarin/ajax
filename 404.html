@@ -95,7 +95,7 @@
 	    //d.href = "https://drive.google.com/file/d/18SSYHUYz7AMDFUucK-aRg0UVFD1TJjOf/view?usp=drive_link";
 	    //apkpure.net/p/com.Detach.Ajax	
 	    d.href = "https://www.amazon.com/gp/product/B0DV976FZS";
-	    e.href = "ajax://param?" + p;
+	    e.href = "ajax://param?" + encodeURIComponent(p);
 	}
 	if(p){
 		e.style.display='inline-block';
