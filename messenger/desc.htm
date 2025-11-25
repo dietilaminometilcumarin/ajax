@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Комбинированная цифровая платформа</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+        background: #0b2948;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 32px;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    header p {
+        font-size: 17px;
+        max-width: 750px;
+        margin: 10px auto 0;
+        opacity: 0.9;
+    }
+
+    /* ---------- CONTENT ---------- */
+    .container {
+        max-width: 960px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .section {
+        background: #fff;
+        padding: 30px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+        margin-top: 0;
+        color: #0b2948;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+
+    .list {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .list li {
+        margin-bottom: 8px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+        background: #0b2948;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 15px;
+    }
+
+    /* ===========================================================
+       АДАПТИВНАЯ ВЕРСТКА
+       =========================================================== */
+
+    /* ----- планшеты (до 900px) ----- */
+    @media (max-width: 900px) {
+        header h1 {
+            font-size: 28px;
+        }
+        header p {
+            font-size: 16px;
+        }
+        .container {
+            margin: 30px auto;
+        }
+        .section {
+            padding: 25px;
+        }
+        .section h2 {
+            font-size: 22px;
+        }
+    }
+
+    /* ----- смартфоны (до 600px) ----- */
+    @media (max-width: 600px) {
+        header {
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        .container {
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+        }
+
+        .section p,
+        .list li {
+            font-size: 15px;
+        }
+
+        footer {
+            font-size: 14px;
+            padding: 15px;
+        }
+    }
+
+    /* ----- маленькие смартфоны (до 380px) ----- */
+    @media (max-width: 380px) {
+        header h1 {
+            font-size: 20px;
+        }
+        .section {
+            padding: 18px;
+        }
+        .section h2 {
+            font-size: 18px;
+        }
+        .section p {
+            font-size: 14px;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Stealth мессенджер и социальная сеть</h1>
+    <p>Многофункциональное пространство для общения, блогинга, развлечений и деловых задач.</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Описание платформы</h2>
+        <p>
+            Stealth — комбинированная цифровая платформа, объединяющая различные сервисы для комфортного общения и работы. 
+            Это быстрое и лёгкое приложение, где можно переписываться, совершать видеозвонки, отправлять смайлы, 
+            голосовые сообщения, вести личные каналы и пользоваться внешними сервисами — от погоды до ChatGPT 
+            и криптовалютных менеджеров.
+        </p>
+        <p>
+            Stealth  — мини-социальная сеть с мощными инструментами для блогеров, друзей и деловых партнёров.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Простой старт</h2>
+        <p>Начать пользоваться очень просто:</p>
+        <ul class="list">
+            <li>запускаем приложение;</li>
+            <li>вводим свой e-mail;</li>
+            <li>получаем секретный код на почту;</li>
+            <li>вводим этот код в поле регистрации;</li>
+            <li>нажимаем кнопку <b>JOIN</b>.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Общение на максимум</h2>
+        <p>
+            Платформа состоит из взаимосвязанных подсистем. Их количество растет, что расширяет доступный функционал 
+            и делает использование приложения более удобным.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Мессенджер</h2>
+        <p>Функционал обмена сообщениями позволяет:</p>
+        <ul class="list">
+            <li>отправлять тексты, фото и видео;</li>
+            <li>совершать P2P видеозвонки;</li>
+            <li>отправлять голосовые сообщения;</li>
+            <li>делиться эмоциями и важной информацией.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Для блогеров</h2>
+        <p>
+            Частные каналы позволяют вести открытые и закрытые медиаканалы. 
+            Закрытые каналы можно монетизировать, создавать посты с фото и видео, а подписчики могут оставлять 
+            комментарии и ставить лайки.
+        </p>
+        <p>
+            Имя автора скрыто от читателей, обеспечивая дополнительную анонимность и безопасность.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Внешние сервисы</h2>
+        <p>Доступны:</p>
+        <ul class="list">
+            <li>онлайн-игры;</li>
+            <li>биткоин-менеджеры;</li>
+            <li>интерактивные чаты (включая ChatGPT);</li>
+            <li>погодные сервисы;</li>
+            <li>и многое другое.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Монетизация контента</h2>
+        <p>Встроенный биткоин-кошелек позволяет:</p>
+        <ul class="list">
+            <li>делать донаты;</li>
+            <li>оплачивать премиум-функции;</li>
+            <li>подписываться на закрытые каналы.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Для свободных людей</h2>
+        <p>
+            Приложение экономит время, помогает решать повседневные задачи и не перегружено лишними функциями. 
+            Это открытая платформа без цензуры и вмешательства, созданная для свободного общения и творчества.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Stealth. Все права защищены.
+</footer>
+
+</body>
+</html>
